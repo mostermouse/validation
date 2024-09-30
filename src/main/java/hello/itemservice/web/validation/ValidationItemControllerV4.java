@@ -58,7 +58,7 @@ public class ValidationItemControllerV4 {
             log.info("errors={}" , bindingResult);
             return "validation/v4/addForm";
         }
-
+        //
         Item item = new Item();
         item.setItemName(form.getItemName());
         item.setPrice(form.getPrice());
@@ -100,7 +100,7 @@ public class ValidationItemControllerV4 {
         itemParam.setPrice(form.getPrice());
         itemParam.setQuantity(form.getQuantity());
 
-        itemRepository.update(itemId, itemParam);
+        itemRepository.update(itemId, itemParam);   
         return "redirect:/validation/v4/items/{itemId}";
 
     }
